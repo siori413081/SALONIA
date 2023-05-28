@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width: 769px) {
+    /* PC style */
+
+.header-sp{
+    display: none;
+}
+
+.header-pc{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    padding-left: 65px;
+}
+
+.header-title{
+    font-size: 16px;
+}
+
+.header-nav-list{
+    display: flex;
+}
+
+.header-nav-list-item{
+    font-size: 14px;
+    padding-right: 30px;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+    /* SP style */
+
+.header-pc{
+    display: none;
+}
+
+}
