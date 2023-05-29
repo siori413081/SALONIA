@@ -4,8 +4,140 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+.topics{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 0 80px;
+}
+
+.topics-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 80px;
+}
+
+.topics-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-topics{
+    position: relative;
+    width: 45%;
+}
+
+.main-topics img{
+    width: 100%;
+}
+
+.main-topics p{
+    position: absolute;
+    top: 180px;
+    right: 0;
+    font-size: .8rem;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    line-height: 1.3rem;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.main-topics p::first-line{
+    font-style: italic;
+    color: #808080;
+}
+
+.sub-topics{
+    width: 45%;
+}
+
+.sub-topics-list-item{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.sub-topics-list-item:last-child{
+    margin-bottom: 0;
+}
+
+.sub-topics-list-item img{
+    width: 40%;
+}
+
+.sub-topics-list-item p{
+    font-size: .8rem;
+    margin-left: 20px;
+}
+
+.sub-topics-list-item p::first-line{
+    font-style: italic;
+    color: #808080;
+}
+
 }
 
 @media screen and (max-width: 768px) {
     /* SP style */
+
+.topics{
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.topics-title{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+}
+
+.main-topics{
+    position: relative;
+}
+
+.main-topics p{
+    position: absolute;
+    top: 150px;
+    right: 0;
+    font-size: .8rem;
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.main-topics p::first-line{
+    font-style: italic;
+    color: #808080;
+}
+
+.sub-topics{
+    margin: 100px 0 30px;
+}
+
+.sub-topics-list-item{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.sub-topics-list-item:last-child{
+    margin-bottom: 0;
+}
+
+.sub-topics-list-item img{
+    width: 40%;
+    margin-right: 20px;
+}
+
+.sub-topics-list-item p{
+    font-size: .8rem;
+}
+
+.sub-topics-list-item p::first-line{
+    font-style: italic;
+    color: #808080;
+}
+
 }

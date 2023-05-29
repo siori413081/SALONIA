@@ -4,8 +4,40 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+.product{
+    padding: 50px 0 100px;
+}
+
+.product-inner{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 80px;
+}
+
+.product-main-image img{
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+}
+
 }
 
 @media screen and (max-width: 768px) {
     /* SP style */
+
+.product{
+    padding: 100px 0 50px;
+}
+
+.product-title{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+}
+
 }

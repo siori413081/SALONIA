@@ -18,7 +18,7 @@
     padding-left: 65px;
 }
 
-.header-title{
+.header-pc-title{
     font-size: 16px;
 }
 
@@ -38,6 +38,80 @@
 
 .header-pc{
     display: none;
+}
+
+.header-sp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.header-sp-title{
+    font-size: 4vw;
+}
+
+.sp-open-btn{
+    position: relative;
+	cursor: pointer;
+    width: 70px;
+    height:70px;
+}
+
+.sp-open-btn span{
+    position: absolute;
+    display: inline-block;
+    transition: all 0.4s;
+}
+
+.sp-open-btn span:nth-of-type(1){
+    top: 15px;
+    right: 20px;
+    height: 2px;
+	background: #000;
+  	width: 45%;
+}
+
+.sp-open-btn span:nth-of-type(2){
+    top: 25px;
+    right: 20px;
+    height: 2px;
+	background: #000;
+  	width: 45%;
+}
+
+.sp-open-btn span:nth-of-type(3){
+    top: 35px;
+    right: 20px;
+    height: 2px;
+	background: #000;
+  	width: 45%;
+}
+
+.sp-open-btn span:nth-of-type(4){
+    top: 45px;
+    right: 17px;
+    font-size: 12px;
+}
+
+.sp-open-btn.active span:nth-of-type(1){
+    top: 18px;
+    right: 20px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.sp-open-btn.active span:nth-of-type(2),
+.sp-open-btn.active span:nth-of-type(4){
+	opacity: 0;/*真ん中の線は透過*/
+}
+
+.sp-open-btn.active span:nth-of-type(3){
+    top: 30px;
+    right: 20px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
 }
 
 }

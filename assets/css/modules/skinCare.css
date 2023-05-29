@@ -4,8 +4,125 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+.skinCare-inner{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skinCare-main-image{
+    padding-bottom: 50px;
+}
+
+.skinCare-main-image img{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.skinCare-titles{
+    padding-left: 50%;
+}
+
+.skinCare-main-title{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.skinCare-sub-title{
+    font-size: .9rem;
+    margin-bottom: 50px;
+}
+
+.skinCare-image-list{
+    display: flex;
+}
+
+.skinCare-image-list-item{
+    width: 24%;
+    margin-right: 10px;
+}
+
+.skinCare-image-list-item img{
+    height: 24.8vh;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.skinCare-image-list-item p{
+    font-size: .8rem;
+    text-align: center;
+}
+
 }
 
 @media screen and (max-width: 768px) {
     /* SP style */
+
+.skinCare{
+    padding: 50px 0 80px;
+}
+
+.skinCare-main-image{
+    padding-bottom: 50px;
+}
+
+.skinCare-main-image img{
+    height: 33vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.skinCare-titles{
+    padding-left: 50%;
+}
+
+.skinCare-main-title{
+    font-size: 1rem;
+    padding-bottom: 20px;
+}
+
+.skinCare-sub-title{
+    font-size: .8rem;
+    padding-bottom: 20px;
+}
+
+.skinCare-image{
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.skinCare-image-slider{
+    width: 232vw;
+    overflow-x: scroll;
+}
+
+.skinCare-image-slider::-webkit-scrollbar{
+    display: none;
+}
+
+.skinCare-image-list{
+    display: flex;
+}
+
+.skinCare-image-list-item{
+    padding-left: 10px;
+}
+
+.skinCare-image-list-item:first-child{
+    padding-left: 0;
+}
+
+.skinCare-image-list-item img{
+    width: 100%;
+    height: 31.5vh;
+    object-fit: cover;
+}
+
+.skinCare-image-list-item p{
+    text-align: center;
+    font-size: .7rem;
+}
+
+
+
 }

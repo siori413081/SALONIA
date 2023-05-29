@@ -4,8 +4,86 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+.support-inner{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0 80px;
+}
+
+.support-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 80px;
+}
+
+.support-contents-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.support-contents-list-item{
+    margin-left: 50px;
+}
+
+.support-contents-list-item:first-child{
+    margin-left: 0;
+}
+
+.support-contents-list-item img{
+    padding-bottom: 30px;
+    width: 100%;
+    height: 30vh;
+}
+
+.support-contents-text{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.support-question{
+    text-align: center;
+    font-size: .8rem;
+}
+
 }
 
 @media screen and (max-width: 768px) {
     /* SP style */
+
+.support{
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 50px 0 80px;
+}
+
+.support-title{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+}
+
+.support-contents-list-item{
+    padding-bottom: 50px;
+}
+
+.support-contents-list-item:last-child{
+    padding-bottom: 0;
+}
+
+.support-contents-list-item img{
+    padding-bottom: 15px;
+}
+
+.support-contents-text{
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: .8rem;
+}
+
+.support-question{
+    text-align: center;
+    font-size: .7rem;
+}
+
 }
