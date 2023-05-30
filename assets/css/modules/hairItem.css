@@ -15,6 +15,7 @@
 
 .hairItem-titles{
     padding-left: 30px;
+    letter-spacing: 0.3em;
 }
 
 .hairItem-main-title{
@@ -63,6 +64,7 @@
 .hairItem-main-title{
     font-size: 1rem;
     padding-bottom: 20px;
+    letter-spacing: 0.1em;
 }
 
 .hairItem-sub-title{

@@ -4,6 +4,10 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+.skinCare{
+    padding: 200px 0 100px;
+}
+
 .skinCare-inner{
     max-width: 800px;
     margin: 0 auto;
@@ -74,6 +78,7 @@
 
 .skinCare-titles{
     padding-left: 50%;
+    letter-spacing: 0.1em;
 }
 
 .skinCare-main-title{

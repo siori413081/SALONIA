@@ -4,8 +4,140 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+.select{
+    padding: 100px 0 200px;
+}
+
+.select-inner{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.select-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 80px;
+    letter-spacing: 0.3em;
+}
+
+.select-contents1,
+.select-contents2{
+    display: flex;
+}
+
+.select-contents1{
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.select-contents2{
+    position: relative;
+    flex-direction: row-reverse;
+}
+
+.select-contents1 img{
+    width: 45%;
+    height: 65vh;
+}
+
+.select-contents2 img{
+    width: 70%;
+}
+
+.select-contents1-text{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%);
+}
+
+.select-contents2-text{
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+}
+
+.select-contents1-text h3,
+.select-contents2-text h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.3em;
+    padding-bottom: 20px;
+}
+
+.select-contents1-text p,
+.select-contents2-text p{
+    font-size: .9rem;
+    letter-spacing: .1em;
+}
+
 }
 
 @media screen and (max-width: 768px) {
     /* SP style */
+
+.select{
+    width: 100%;
+    padding-top: 200%;
+}
+
+.select-title{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+}
+
+.select-contents1{
+    position: relative;
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.select-contents2{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.select-contents1 img{
+    width: 60%;
+    height: 22vh;
+    object-fit: cover;
+}
+
+.select-contents2 img{
+    width: 60%;
+    height: 22vh;
+    object-fit: cover;
+}
+
+.select-contents1-text{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.select-contents2-text{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.select-contents1-text h3,
+.select-contents2-text h3{
+    font-size: .8rem;
+    font-weight: bold;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    padding-bottom: 10px;
+}
+
+.select-contents1-text p,
+.select-contents2-text p{
+    font-size: .5rem;
+    letter-spacing: .1em;
+}
+
 }

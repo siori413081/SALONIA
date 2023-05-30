@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width: 769px) {
+    /* PC style */
+
+.concept{
+    padding-top: 200px;
+}
+
+.concept-inner{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.concept-contents{
+    position: relative;
+}
+
+.concept-image-left{
+    position: absolute;
+    left: 0;
+    width: 33%;
+    height: 63vh;
+    object-fit: cover;
+}
+
+.concept-image-right{
+    position: absolute;
+    top: 25rem;
+    right: 0;
+    width: 22%;
+    height: 40vh;
+    object-fit: cover;
+}
+.concept-text-box{
+    position: absolute;
+    top: 10rem;
+    left: 42%;
+}
+
+.concept-text-box h3{
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    padding-bottom: 20px;
+}
+
+.concept-text-box h4{
+    font-size: .9rem;
+    font-weight: bold;
+    padding-bottom: 40px;
+    letter-spacing: 0.2em;
+}
+
+.concept-text-box p{
+    font-size: .9rem;
+    letter-spacing: 0.2em;
+    line-height: 3;
+}
+
+.concept-image-bottom{
+    margin-top: 800px;
+    width: 100%;
+    object-fit: cover;
+    height: 60vh;
+}
+
+
+}
+
+@media screen and (max-width: 768px) {
+    /* SP style */
+
+.concept{
+    margin-bottom: 100px;
+}
+
+.concept-inner{
+    position: relative;
+}
+
+.concept-image-left{
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 50%;
+    height: 38vh;
+    object-fit: cover;
+}
+
+.concept-image-right{
+    position: absolute;
+    top: 10rem;
+    right: 0;
+    width: 35%;
+    object-fit: cover;
+}
+
+.concept-text-box{
+    padding: 27rem 0 10rem 1rem;
+}
+
+.concept-text-box h3{
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    padding-bottom: 20px;
+}
+
+.concept-text-box h4{
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding-bottom: 30px;
+}
+
+.concept-text-box p{
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 1.7rem;
+}
+
+}

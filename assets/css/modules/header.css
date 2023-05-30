@@ -20,6 +20,7 @@
 
 .header-pc-title{
     font-size: 16px;
+    letter-spacing: 0.1em;
 }
 
 .header-nav-list{
@@ -29,6 +30,7 @@
 .header-nav-list-item{
     font-size: 14px;
     padding-right: 30px;
+    letter-spacing: 0.1em;
 }
 
 }
