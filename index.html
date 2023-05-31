@@ -9,6 +9,7 @@
     <!--link rel='stylesheet' href='./assets/css/main.css'-->
     <link rel='stylesheet' href='https://siori413081.github.io/portfolio2/assets/css/main.css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 <body>
 <div class="wrapper">
@@ -34,7 +35,104 @@
             </div><!--header-sp-->
         </header>
     </section>
-    <section class="hero"></section>
+    <section class="sp-menu">
+        <div class="sp-product">
+            <h3>PRODUCT<span> 商品を探す</span></h3>
+            <div class="sp-product-hair">
+                    <h4>
+                        <div>HAIR ITEM <span> ヘアアイテム</span></div>
+                        <div class="plus-icon"></div>
+                    </h4>
+                </div>
+            <ul class="sp-product-skin accordion-area">
+                <h4>
+                    <div>SKINCARE ITEM <span> スキンケアアイテム</span></div>
+                    <div class="plus-icon"></div>
+                </h4>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="sp-contents">
+            <h3>CONTENTS<span> コンテンツを見る</span></h3>
+            <ul class="sp-contents-list">
+                <li class="sp-contents-list-item">TOPICS<span><br>お知らせ</span></li>
+                <li class="sp-contents-list-item">PICK UP<span><br>ピックアップ</span></li>
+                <li class="sp-contents-list-item">GIFT<span><br>ギフトアイテム</span></li>
+                <li class="sp-contents-list-item">COLUMN<span><br>コラム</span></li>
+            </ul>
+        </div>
+        <div class="sp-support">
+            <h3>SUPPORT<span> よくある質問を見る</span></h3>
+            <ul class="sp-support-hair accordion-area">
+                <h4>
+                    <div>HAIR ITEM <span> ヘアアイテム</span></div>
+                    <div class="plus-icon"></div>
+                </h4>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="sp-support-skin accordion-area">
+                <h4>
+                    <div>SKINCARE ITEM <span> スキンケアアイテム</span></div>
+                    <div class="plus-icon"></div>
+                </h4>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="sp-onlineshop">
+            <h3>OFFICIAL ONLINE SHOP</h3>
+            <ul>
+                <li>
+                    <i class="shopping-cart1" data-feather="shopping-cart"></i>
+                    <div class="sp-onlineshop-text">
+                        <p>公式ストアで購入する</p>
+                        <div class="arrow arrow-right"></div>
+                    </div>
+                </li>
+                <li>
+                    <i class="shopping-cart2" data-feather="shopping-cart"></i>
+                    <div class="sp-onlineshop-text">
+                        <p>楽店市場で購入する</p>
+                        <div class="arrow arrow-right"></div>
+                    </div>
+                </li>
+                <li>
+                    <i class="shopping-cart3" data-feather="shopping-cart"></i>
+                    <div class="sp-onlineshop-text">
+                        <p>Amazonで購入する</p>
+                        <div class="arrow arrow-right"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sp-sns">
+            <ul class="sp-sns-list">
+                <i class="fa-brands fa-instagram fa-lg sp-sns-list-item"></i>
+                <i class="fa-brands fa-facebook fa-lg sp-sns-list-item"></i>
+                <i class="fa-brands fa-twitter fa-lg sp-sns-list-item"></i>
+                <i class="fa-brands fa-youtube fa-lg sp-sns-list-item"></i>
+                <i class="fa-brands fa-line fa-lg sp-sns-list-item"></i>
+                <i class="fa-brands fa-pinterest fa-lg sp-sns-list-item"></i>
+            </ul>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="hero-inner">
+            <ul class="slider">
+                <li class="slider-item slider-item01"></li>
+                <li class="slider-item slider-item02"></li>
+                <li class="slider-item slider-item03"></li>
+                <li class="slider-item slider-item04"></li>
+                <li class="slider-item slider-item05"></li>
+            </ul>
+        </div>
+    </section>
     <section class="topics">
         <h2 class="topics-title">TOPICS</h2>
         <div class="topics-inner">
@@ -215,6 +313,10 @@
                 <div class="select-contents1-text">
                     <h3>あなたに合うヘアアイロン<br>探せる、見つかる。</h3>
                     <p>HAIR STYLE SELECT</p>
+                    <div class="select-start">
+                        <p>START</p>
+                        <div class="arrow arrow-right"></div>
+                    </div>
                 </div>
             </div><!--select-contents1-->
             <div class="select-contents2">
@@ -222,6 +324,10 @@
                 <div class="select-contents2-text">
                     <h3>おすすめの<br>スキンケアアイテムを探す</h3>
                     <p>SKIN CARE SELECT</p>
+                    <div class="select-more">
+                        <p>MORE</p>
+                        <div class="arrow arrow-right"></div>
+                    </div>
                 </div>
             </div><!--select-contents2-->
         </div>
@@ -322,6 +428,7 @@
     </section>
 </div><!--wrapper-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v6.4.0js/all.js"></script>
 <script>feather.replace()</script>
 <script src="./assets/js/main.js"></script>

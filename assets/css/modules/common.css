@@ -77,6 +77,37 @@ body{
     background-color: #fff;
 }
 
+.more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    line-height: 3.5;
+    border-bottom: 1px solid #000;
+    margin-left: 65%;
+}
+
+.more-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    line-height: 3.5;
+    border-bottom: 1px solid #000;
+    margin-left: 65%;
+    margin-top: 120vh;
+}
+
+.more p{
+    font-size: .6rem;
+    letter-spacing: .1em;
+}
+
+.more-c p{
+    font-size: .6rem;
+    letter-spacing: .1em;
+}
+
 .arrow {
     position: relative;
     display: inline-block;

@@ -73,6 +73,21 @@
     letter-spacing: .1em;
 }
 
+.select-start,
+.select-more{
+    display: flex;
+    border-bottom: 1px solid #000;
+    align-items: center;
+    width: 200px;
+    line-height: 3.5;
+    padding-top: 20%;
+}
+
+.select-start p,
+.select-more p{
+    font-size: .8rem;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -80,7 +95,7 @@
 
 .select{
     width: 100%;
-    padding-top: 200%;
+    padding-top: 50%;
 }
 
 .select-title{
@@ -138,6 +153,21 @@
 .select-contents2-text p{
     font-size: .5rem;
     letter-spacing: .1em;
+}
+
+.select-start,
+.select-more{
+    display: flex;
+    border-bottom: 1px solid #000;
+    align-items: center;
+    width: 150px;
+    line-height: 3.5;
+    padding-top: 10px;
+}
+
+.select-start p,
+.select-more p{
+    font-size: .6rem;
 }
 
 }

@@ -1,6 +1,7 @@
 
 @import url('https://siori413081.github.io/portfolio2/assets/css/modules/common.css');
 @import url('https://siori413081.github.io/portfolio2/assets/css/modules/header.css');
+@import url('https://siori413081.github.io/portfolio2/assets/css/modules/spOpenMenu.css');
 @import url('https://siori413081.github.io/portfolio2/assets/css/modules/hero.css');
 @import url('https://siori413081.github.io/portfolio2/assets/css/modules/topics.css');
 @import url('https://siori413081.github.io/portfolio2/assets/css/modules/product.css');
@@ -16,6 +17,7 @@
 /*
 @import url('./modules/common.css');
 @import url('./modules/header.css');
+@import url('./modules/spOpenMenu.css');
 @import url('./modules/hero.css');
 @import url('./modules/topics.css');
 @import url('./modules/product.css');

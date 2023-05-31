@@ -4,8 +4,154 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+    height: 100vh;
+}
+/*　背景画像設定　*/
+
+.slider-item01 {
+    background:url(../../../assets/images/hero1.JPG);
+}
+
+.slider-item02 {
+    background:url(../../../assets/images/hero2.JPG);
+}
+
+.slider-item03 {
+    background:url(../../../assets/images/hero3.JPG);
+}
+
+.slider-item04 {
+    background:url(../../../assets/images/hero4.JPG);
+}
+
+.slider-item05 {
+    background:url(../../../assets/images/hero5.JPG);
+}
+
+.slick-track{
+    height: 100%;
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+.slick-list{
+    height: 100vh;
+}
+
+/*ドットナビゲーションの設定*/
+
+.slide-dots {
+    position: absolute;
+    top: 105%;
+    left: 30px;
+}
+
+.slide-dots li {
+    display:inline-block;
+    margin:0 5px;
+}
+
+.slide-dots button {
+    color: transparent;
+    outline: none;
+    width:50px;/*ドットボタンのサイズ*/
+    height:1px;/*ドットボタンのサイズ*/
+    display:block;
+    background:gray;/*ドットボタンの色*/
+    border: 0;
+}
+
+.slide-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
 }
 
 @media screen and (max-width: 768px) {
     /* SP style */
+
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+    height: 100vh;
+}
+/*　背景画像設定　*/
+
+.slider-item01 {
+    background:url(../../../assets/images/hero1.JPG);
+}
+
+.slider-item02 {
+    background:url(../../../assets/images/hero2.JPG);
+}
+
+.slider-item03 {
+    background:url(../../../assets/images/hero3.JPG);
+}
+
+.slider-item04 {
+    background:url(../../../assets/images/hero4.JPG);
+}
+
+.slider-item05 {
+    background:url(../../../assets/images/hero5.JPG);
+}
+
+.slick-track{
+    height: 90%;
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+.slick-list{
+    height: 100vh;
+}
+
+/*ドットナビゲーションの設定*/
+
+.slide-dots {
+    position: absolute;
+    top: 92%;
+    left: 20px;
+}
+
+.slide-dots li {
+    display:inline-block;
+    margin:0 3px;
+}
+
+.slide-dots button {
+    color: transparent;
+    outline: none;
+    width:20px;/*ドットボタンのサイズ*/
+    height:1px;/*ドットボタンのサイズ*/
+    display:block;
+    background:gray;/*ドットボタンの色*/
+    border: 0;
+}
+
+.slide-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
 }
