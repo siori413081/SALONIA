@@ -3,6 +3,13 @@ $(".sp-open-btn").click(function () {
     $(this).toggleClass('active');
     $('.sp-menu').toggleClass('active');
     $('.header-sp').toggleClass('active');
+    $('body').toggleClass('fixed');
+});
+
+//アコーディオンをクリックした時の動作
+$('.plus-icon').click(function() {
+	$(this).toggleClass('close');
+    $('.plus-icon').next(".box").slideToggle();
 });
 
 /*hero slider*/
@@ -27,3 +34,52 @@ $('.slider').slick({
 $('.slider').on('touchmove', function(event, slick, currentSlide, nextSlide){
 $('.slider').slick('slickPlay');
 });
+
+$(function(){
+    $('.product-hover-btn').hover(function(){
+        $('.product-hover').toggleClass('active');
+    });
+});
+
+/* header スクロールしたら途中から固定 */
+function FixedAnime() {
+	var elemTop = $('.topics').offset().top;//.topicsの位置まできたら
+	var scroll = $(window).scrollTop();
+	if(scroll <= 20){//上から20pxスクロールされたら $('#header').addClass('DownMove');//DownMoveというクラス名を除き } else if (scroll >= elemTop){
+			$('.header-pc').removeClass('UpMove');//#headerについているUpMoveというクラス名を除く
+			$('.header-pc').addClass('DownMove');//#headerについているDownMoveというクラス名を付与
+
+		}else{
+			if($('.header-pc').hasClass('DownMove')){//すでに#headerにDownMoveというクラス名がついていたら
+				$('.header-pc').removeClass('DownMove');//DownMoveというクラス名を除き
+				$('.header-pc').addClass('UpMove');//UpnMoveというクラス名を付与
+			}
+		}
+}
+
+
+function slideAnime(){
+	//====左に動くアニメーションここから===
+		$('.leftAnime').each(function(){ 
+			var elemPos = $(this).offset().top-50;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll >= elemPos - windowHeight){
+				//左から右へ表示するクラスを付与
+				//テキスト要素を挟む親要素（左側）とテキスト要素を元位置でアニメーションをおこなう
+				$(this).addClass("slideAnimeLeftRight"); //要素を左枠外にへ移動しCSSアニメーションで左から元の位置に移動
+				$(this).children(".leftAnimeInner").addClass("slideAnimeRightLeft");  //子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+			}else{
+				//左から右へ表示するクラスを取り除く
+				$(this).removeClass("slideAnimeLeftRight");
+				$(this).children(".leftAnimeInner").removeClass("slideAnimeRightLeft");
+				
+			}
+		});
+		
+	}
+	
+	// 画面をスクロールをしたら動かしたい場合の記述
+	$(window).scroll(function (){
+		slideAnime();/* アニメーション用の関数を呼ぶ*/
+	});// ここまで画面をスクロールをしたら動かしたい場合の記述

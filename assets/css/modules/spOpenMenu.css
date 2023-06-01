@@ -24,7 +24,9 @@
     opacity: 1;
     transition: all .3s;
     width: 100%;
+    height: 90vh;
     padding-top: 70px;
+    overflow: auto;
 }
 
 .sp-product h3,
@@ -92,7 +94,7 @@
 .sp-onlineshop{
     max-width: 80%;
     margin: 0 auto;
-    padding: 40px 10%;
+    padding: 50px 10% 20px;
     background-color: #ebebeb;
 }
 
@@ -104,8 +106,10 @@
 }
 
 .sp-onlineshop li{
+    width: 100%;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
 }
 
 .sp-onlineshop li:last-child{
@@ -115,8 +119,9 @@
 .sp-onlineshop-text{
     display: flex;
     justify-content: space-around;
-    background-color: #fff;
-    padding: 15px;
+    align-items: center;
+    padding: 15px 0;
+    width: 100%;
 }
 
 .sp-onlineshop-text p{
@@ -128,6 +133,7 @@
 .shopping-cart2,
 .shopping-cart3{
     padding: 15px;
+    color: #fff;
 }
 
 .shopping-cart1{
@@ -170,12 +176,22 @@
     top:-7px;
     right: 25px;
     transform: rotate(0deg);
+    transition: all 0.3s;
 }
 
 .plus-icon::after{
     top:-7px;
     right: 25px;
     transform: rotate(90deg);
+    transition: all 0.3s;
+}
+
+.plus-icon.close::before{
+    transform: rotate(-45deg);
+}
+
+.plus-icon.close::after{
+    transform: rotate(45deg);
 }
 
 .sp-product-hair-item{
@@ -194,6 +210,37 @@
 }
 
 .sp-product-hair-item-text p::first-line{
+    font-size: .8rem;
+}
+
+.box{
+    display: none;
+}
+
+.box.active{
+    display: block;
+    transition: all 0.3s;
+}
+
+.box ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.box-text{
+    display: flex;
+    align-items: center;
+}
+
+.box-text p{
+    font-size: .7rem;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.box-text p::first-line{
     font-size: .8rem;
 }
 

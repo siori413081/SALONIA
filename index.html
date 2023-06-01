@@ -6,8 +6,8 @@
     <title>SALONIA</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='./assets/css/reset.css'>
-    <!--link rel='stylesheet' href='./assets/css/main.css'-->
-    <link rel='stylesheet' href='https://siori413081.github.io/portfolio2/assets/css/main.css'>
+    <link rel='stylesheet' href='./assets/css/main.css'>
+    <!--link rel='stylesheet' href='https://siori413081.github.io/portfolio2/assets/css/main.css'-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -19,13 +19,58 @@
                 <p class="header-pc-title">SALONIA</p>
                 <nav class="header-nav">
                     <ul class="header-nav-list">
-                        <li class="header-nav-list-item">TOPICS</li>
-                        <li class="header-nav-list-item">PRODUCT</li>
-                        <li class="header-nav-list-item">PICK UP</li>
-                        <li class="header-nav-list-item">GIFT</li>
-                        <li class="header-nav-list-item">COLUMN</li>
-                        <li class="header-nav-list-item">SUPPORT</li>
-                        <li class="header-nav-list-item">ONLINE SHOP</li>
+                        <li class="header-nav-list-item"><a rel="#">TOPICS</a></li>
+                        <li class="header-nav-list-item product-hover-btn">
+                            <a rel="#">PRODUCT</a>
+                            <!--div class="product-hover">
+                                <ul>
+                                    <h3>HAIR ITEM ヘアアイテム</h3>
+                                    <li>
+                                        <div class="product-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                    <li>
+                                        <div class="product-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                    <li>
+                                        <div class="product-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h3>SKINCARE ITEM スキンケアアイテム</h3>
+                                    <li>
+                                        <div class="product-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                    <li>
+                                        <div class="product-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                </ul>
+                            </div-->
+                        </li>
+                        <li class="header-nav-list-item"><a rel="#">PICK UP</a></li>
+                        <li class="header-nav-list-item"><a rel="#">GIFT</a></li>
+                        <li class="header-nav-list-item"><a rel="#">COLUMN</a></li>
+                        <li class="header-nav-list-item"><a rel="#">SUPPORT</a></li>
+                        <li class="header-nav-list-item"><a rel="#">ONLINE SHOP</a></li>
                     </ul>
                 </nav>
             </div><!--header-pc-->
@@ -36,23 +81,78 @@
         </header>
     </section>
     <section class="sp-menu">
+        <div class="sp-menu-inner">
         <div class="sp-product">
             <h3>PRODUCT<span> 商品を探す</span></h3>
             <div class="sp-product-hair">
-                    <h4>
-                        <div>HAIR ITEM <span> ヘアアイテム</span></div>
-                        <div class="plus-icon"></div>
-                    </h4>
+                <h4>
+                    <div>HAIR ITEM <span> ヘアアイテム</span></div>
+                    <div class="plus-icon"></div>
+                </h4>
+                <div class="box">
+                    <ul>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>ALL HAIR ITEM<br>全てのヘアアイテム</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>HAIR IRON<br>ヘアアイロン</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>DRYER & BRUSH<br>ドライヤー & ブラシ</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>STYLING ITEM<br>スタイリングアイテム</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                    </ul>
                 </div>
-            <ul class="sp-product-skin accordion-area">
+            </div>
+            <div class="sp-product-skin accordion-area">
                 <h4>
                     <div>SKINCARE ITEM <span> スキンケアアイテム</span></div>
                     <div class="plus-icon"></div>
                 </h4>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+                <div class="box">
+                    <ul>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>ALL SKINCARE ITEM<br>全てのスキンケアアイテム</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>FACE CARE<br>フェイスケア</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>BODY CARE<br>ボディケア</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="sp-contents">
             <h3>CONTENTS<span> コンテンツを見る</span></h3>
@@ -65,25 +165,75 @@
         </div>
         <div class="sp-support">
             <h3>SUPPORT<span> よくある質問を見る</span></h3>
-            <ul class="sp-support-hair accordion-area">
+            <div class="sp-support-hair accordion-area">
                 <h4>
                     <div>HAIR ITEM <span> ヘアアイテム</span></div>
                     <div class="plus-icon"></div>
                 </h4>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <ul class="sp-support-skin accordion-area">
+                <div class="box">
+                    <ul>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>ALL HAIR ITEM<br>全てのヘアアイテム</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>HAIR IRON<br>ヘアアイロン</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>DRYER & BRUSH<br>ドライヤー & ブラシ</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>STYLING ITEM<br>スタイリングアイテム</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sp-support-skin accordion-area">
                 <h4>
                     <div>SKINCARE ITEM <span> スキンケアアイテム</span></div>
                     <div class="plus-icon"></div>
                 </h4>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+                <div class="box">
+                    <ul>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>ALL SKINCARE ITEM<br>全てのスキンケアアイテム</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>FACE CARE<br>フェイスケア</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                        <li>
+                            <div class="box-text">
+                                <i data-feather="grid"></i>
+                                <p>BODY CARE<br>ボディケア</p>
+                            </div>
+                            <div class="arrow arrow-right"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="sp-onlineshop">
             <h3>OFFICIAL ONLINE SHOP</h3>
@@ -112,15 +262,16 @@
             </ul>
         </div>
         <div class="sp-sns">
-            <ul class="sp-sns-list">
+            <div class="sp-sns-list">
                 <i class="fa-brands fa-instagram fa-lg sp-sns-list-item"></i>
                 <i class="fa-brands fa-facebook fa-lg sp-sns-list-item"></i>
                 <i class="fa-brands fa-twitter fa-lg sp-sns-list-item"></i>
                 <i class="fa-brands fa-youtube fa-lg sp-sns-list-item"></i>
                 <i class="fa-brands fa-line fa-lg sp-sns-list-item"></i>
                 <i class="fa-brands fa-pinterest fa-lg sp-sns-list-item"></i>
-            </ul>
+            </div>
         </div>
+    </div>
     </section>
     <section class="hero">
         <div class="hero-inner">
@@ -134,7 +285,7 @@
         </div>
     </section>
     <section class="topics">
-        <h2 class="topics-title">TOPICS</h2>
+        <h2 class="topics-title slide-in leftAnime">TOPICS</h2>
         <div class="topics-inner">
             <div class="main-topics">
                 <img src="./assets/images/test1.jpg">

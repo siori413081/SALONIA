@@ -73,6 +73,12 @@ body{
     font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'
 }
 
+body.fixed{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
 .wrapper{
     background-color: #fff;
 }
