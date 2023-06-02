@@ -45,10 +45,22 @@
     width: 50%;
 }
 
-.column-contents-list1-item1 img{
+.column-contents-list1-image{
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.column-contents-list1-image img{
     width: 100%;
     object-fit: cover;
-    padding-bottom: 10px;
+    transition: all 1s;
+}
+
+.column-contents-list1-image img:hover{
+    transform: scale(1.2,1.2);
+    transition: all 1s;
+    opacity: .8;
 }
 
 .column-contents-list1-item1 p::first-line{
@@ -77,10 +89,21 @@
     padding-bottom: 40px;
 }
 
-.column-contents-list2-item img{
+.column-contents-list2-image{
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.column-contents-list2-image img{
     width: 100%;
     object-fit: cover;
-    padding-bottom: 20px;
+    transition: all 1s;
+}
+
+.column-contents-list2-image img:hover{
+    transform: scale(1.2,1.2);
+    transition: all 1s;
 }
 
 .column-contents-list2-item p{

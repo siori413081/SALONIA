@@ -37,10 +37,22 @@
     margin-right: 10px;
 }
 
-.hairItem-image-list-item img{
+.hairItem-image-list-itemImg{
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.hairItem-image-list-itemImg img{
     height: 24.8vh;
     object-fit: cover;
-    margin-bottom: 10px;
+    transition: all 1s;
+}
+
+.hairItem-image-list-itemImg img:hover{
+    opacity: .8;
+    transition: all 1s;
+    transform: scale(1.2,1.2);
 }
 
 .hairItem-image-list-item p{
@@ -98,7 +110,12 @@
     padding-left: 0;
 }
 
-.hairItem-image-list-item img{
+.hairItem-image-list-itemImg{
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.hairItem-image-list-itemImg img{
     width: 100%;
     height: 31.5vh;
     object-fit: cover;

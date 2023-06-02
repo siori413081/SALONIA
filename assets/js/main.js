@@ -9,7 +9,7 @@ $(".sp-open-btn").click(function () {
 //アコーディオンをクリックした時の動作
 $('.plus-icon').click(function() {
 	$(this).toggleClass('close');
-    $('.plus-icon').next(".box").slideToggle();
+    $(this).parent('h4').next(".box").slideToggle();
 });
 
 /*hero slider*/
@@ -59,27 +59,66 @@ function FixedAnime() {
 
 
 function slideAnime(){
-	//====左に動くアニメーションここから===
-		$('.leftAnime').each(function(){ 
-			var elemPos = $(this).offset().top-50;
-			var scroll = $(window).scrollTop();
-			var windowHeight = $(window).height();
-			if (scroll >= elemPos - windowHeight){
-				//左から右へ表示するクラスを付与
-				//テキスト要素を挟む親要素（左側）とテキスト要素を元位置でアニメーションをおこなう
-				$(this).addClass("slideAnimeLeftRight"); //要素を左枠外にへ移動しCSSアニメーションで左から元の位置に移動
-				$(this).children(".leftAnimeInner").addClass("slideAnimeRightLeft");  //子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
-			}else{
-				//左から右へ表示するクラスを取り除く
-				$(this).removeClass("slideAnimeLeftRight");
-				$(this).children(".leftAnimeInner").removeClass("slideAnimeRightLeft");
-				
-			}
-		});
-		
+//====左に動くアニメーションここから===
+	$('.leftAnime').each(function(){
+		var elemPos = $(this).offset().top-50;
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+			//左から右へ表示するクラスを付与
+			//テキスト要素を挟む親要素（左側）とテキスト要素を元位置でアニメーションをおこなう
+			$(this).addClass("slideAnimeLeftRight"); //要素を左枠外にへ移動しCSSアニメーションで左から元の位置に移動
+			$(this).children(".leftAnimeInner").addClass("slideAnimeRightLeft");  //子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+		}else{
+			//左から右へ表示するクラスを取り除く
+			$(this).removeClass("slideAnimeLeftRight");
+			$(this).children(".leftAnimeInner").removeClass("slideAnimeRightLeft");
+
+		}
+	});
+
+}
+
+
+// eachTextAnimeにappeartextというクラス名を付ける定義
+function EachTextAnimeControl() {
+$('.eachTextAnime').each(function () {
+	var elemPos = $(this).offset().top - 50;
+	var scroll = $(window).scrollTop();
+	var windowHeight = $(window).height();
+	if (scroll >= elemPos - windowHeight) {
+	$(this).addClass("appeartext");
+
+	} else {
+	$(this).removeClass("appeartext");
 	}
-	
-	// 画面をスクロールをしたら動かしたい場合の記述
-	$(window).scroll(function (){
-		slideAnime();/* アニメーション用の関数を呼ぶ*/
-	});// ここまで画面をスクロールをしたら動かしたい場合の記述
+});
+}
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+	EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
+
+/**more の下線、矢印の動き */
+$(function(){
+	$('.more,.more-c').hover(function(){
+		$('.arrow.arrow-right').toggleClass('active');
+	});
+});
+
+/*supportの矢印の動き */
+$(function(){
+	$('.support-contents-text,.support-question').hover(function(){
+		$('.arrow.arrow-right').toggleClass('active');
+	});
+});
+
+/*selectの矢印の動き */
+$(function(){
+	$('.select-start,.select-more').hover(function(){
+		$('.arrow.arrow-right').toggleClass('active');
+	});
+});

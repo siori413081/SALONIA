@@ -4,88 +4,13 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
-/*==ふわっと出現させるためのCSS*/
-
-/*　上に上がる動き　*/
-
-.header-pc.UpMove{
-	position: fixed;
-	width:100%;
-	animation: UpAnime 0.5s forwards;
+.eachTextAnime span{opacity: 0;}
+.eachTextAnime.appeartext span{ animation:text_anime_on 1s ease-out forwards; }
+@keyframes text_anime_on {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
-@keyframes UpAnime{
-  from {
-    opacity: 1;
-	transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-	transform: translateY(-100px);
-  }
-}
-
-/*　下に下がる動き　*/
-
-.header-pc.DownMove{
-	position: fixed;
-	width:100%;
-	animation: DownAnime 0.5s forwards;
-}
-@keyframes DownAnime{
-  from {
-  	opacity: 0;
-	transform: translateY(-100px);
-  }
-  to {
-  	opacity: 1;
-	transform: translateY(0);
-  }
-}
-
-/*左右のアニメーション*/
-.leftAnime{
-    opacity: 0;/*事前に透過0にして消しておく*/
-}
-
-.slideAnimeLeftRight {
-	animation-name:slideTextX100;
-	animation-duration:0.8s;
-	animation-fill-mode:forwards;
-    opacity: 0;
-}
-
-@keyframes slideTextX100 {
-  from {
-	transform: translateX(-10%); /*要素を左の枠外に移動*/
-        opacity: 0;
-  }
-
-  to {
-	transform: translateX(0);/*要素を元の位置に移動*/
-    opacity: 1;
-  }
-}
-
-.slideAnimeRightLeft {
-	animation-name:slideTextX-100;
-	animation-duration:0.8s;
-	animation-fill-mode:forwards;
-    opacity: 0;
-}
-
-
-@keyframes slideTextX-100 {
-  from {
-	transform: translateX(100%);/*要素を右の枠外に移動*/
-    opacity: 0;
-  }
-
-  to {
-	transform: translateX(0);/*要素を元の位置に移動*/
-    opacity: 1;
-  }
-}
 }
 
 @media screen and (max-width: 768px) {

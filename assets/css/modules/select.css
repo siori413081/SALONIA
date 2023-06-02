@@ -75,12 +75,41 @@
 
 .select-start,
 .select-more{
+    position: relative;
     display: flex;
-    border-bottom: 1px solid #000;
     align-items: center;
     width: 200px;
     line-height: 3.5;
     padding-top: 20%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.select-start::after,
+.select-more::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background:#000;
+    transition: all 1s;
+    transform-origin: left top;
+}
+
+.select-start:hover::after,
+.select-more:hover::after{
+    animation: moreLine 2s ease 0s infinite normal backwards ;
+}
+
+@keyframes moreLine{
+    0%{transform: translateX(-100%);
+    }
+    50%{animation-play-state:paused
+    }
+    100%{transform: translateX(100%);
+    }
 }
 
 .select-start p,
