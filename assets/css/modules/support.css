@@ -24,6 +24,7 @@
 
 .support-contents-list-item{
     margin-left: 50px;
+    opacity: 0;
 }
 
 .support-contents-list-item:first-child{

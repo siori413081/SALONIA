@@ -4,10 +4,11 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>SALONIA</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='./assets/css/reset.css'>
-    <!--link rel='stylesheet' href='./assets/css/main.css'-->
-    <link rel='stylesheet' href='https://siori413081.github.io/portfolio2/assets/css/main.css'>
+    <link rel='stylesheet' href='./assets/css/main.css'>
+    <!--link rel='stylesheet' href='https://siori413081.github.io/portfolio2/assets/css/main.css'-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -22,9 +23,9 @@
                         <li class="header-nav-list-item"><a rel="#">TOPICS</a></li>
                         <li class="header-nav-list-item product-hover-btn">
                             <a rel="#">PRODUCT</a>
-                            <!--div class="product-hover">
-                                <ul>
-                                    <h3>HAIR ITEM ヘアアイテム</h3>
+                            <div class="product-hover">
+                                <ul class="fadeRight">
+                                    <h3>HAIR ITEM <span>ヘアアイテム</span></h3>
                                     <li>
                                         <div class="product-hover-text">
                                             <i data-feather="heart"></i>
@@ -47,8 +48,8 @@
                                         <div class="arrow arrow-right"></div>
                                     </li>
                                 </ul>
-                                <ul>
-                                    <h3>SKINCARE ITEM スキンケアアイテム</h3>
+                                <ul class="fadeRight">
+                                    <h3>SKINCARE ITEM <span>スキンケアアイテム</span></h3>
                                     <li>
                                         <div class="product-hover-text">
                                             <i data-feather="heart"></i>
@@ -64,13 +65,84 @@
                                         <div class="arrow arrow-right"></div>
                                     </li>
                                 </ul>
-                            </div-->
+                            </div>
                         </li>
                         <li class="header-nav-list-item"><a rel="#">PICK UP</a></li>
                         <li class="header-nav-list-item"><a rel="#">GIFT</a></li>
                         <li class="header-nav-list-item"><a rel="#">COLUMN</a></li>
-                        <li class="header-nav-list-item"><a rel="#">SUPPORT</a></li>
-                        <li class="header-nav-list-item"><a rel="#">ONLINE SHOP</a></li>
+                        <li class="header-nav-list-item support-hover-btn"><a rel="#">SUPPORT</a>
+                            <div class="support-hover">
+                                <ul class="fadeRight">
+                                    <h3>HAIR ITEM <span>ヘアアイテム</span></h3>
+                                    <li>
+                                        <div class="support-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                    <li>
+                                        <div class="support-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                    <li>
+                                        <div class="support-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                </ul>
+                                <ul class="fadeRight">
+                                    <h3>SKINCARE ITEM <span>スキンケアアイテム</span></h3>
+                                    <li>
+                                        <div class="support-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                    <li>
+                                        <div class="support-hover-text">
+                                            <i data-feather="heart"></i>
+                                            <p>HAIR IRON<br>ヘアアイロン</p>
+                                        </div>
+                                        <div class="arrow arrow-right"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-nav-list-item onlineShop-hover-btn"><a rel="#">ONLINE SHOP</a>
+                            <div class="onlineShop-hover">
+                                <h3 class="fadeRight">OFFICIAL<br>ONLINE SHOP</h3>
+                                <ul class="fadeRight">
+                                    <li>
+                                        <i class="shopping-cart1" data-feather="shopping-cart"></i>
+                                        <div class="sp-onlineshop-text">
+                                            <p>公式ストアで購入する</p>
+                                            <div class="arrow arrow-right"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="shopping-cart2" data-feather="shopping-cart"></i>
+                                        <div class="sp-onlineshop-text">
+                                            <p>楽店市場で購入する</p>
+                                            <div class="arrow arrow-right"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="shopping-cart3" data-feather="shopping-cart"></i>
+                                        <div class="sp-onlineshop-text">
+                                            <p>Amazonで購入する</p>
+                                            <div class="arrow arrow-right"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </div><!--header-pc-->
@@ -287,14 +359,14 @@
     <section class="topics">
         <h2 class="topics-title eachTextAnime">TOPICS</h2>
         <div class="topics-inner">
-            <div class="main-topics">
+            <div class="main-topics blurTrigger">
                 <div class="main-topics-image">
                     <img src="./assets/images/topics01.jpg">
                 </div>
                 <p>2023.05.11<br>ワンタッチで、浴びるスキンケア。「ホットスチーマー」が5月15日に発売。</p>
             </div>
             <div class="sub-topics">
-                <ul class="sub-topics-list">
+                <ul class="sub-topics-list blurTrigger delayScroll">
                     <li class="sub-topics-list-item">
                         <div class="sub-topics-list-itemImg">
                             <img src="./assets/images/topics02.jpg">
@@ -324,7 +396,7 @@
     <section class="product">
         <div class="product-inner">
             <h2 class="product-title eachTextAnime">PRODUCT</h2>
-            <div class="product-main-image">
+            <div class="product-main-image blurTrigger">
                 <img src="./assets/images/test3.jpg">
             </div>
         </div>
@@ -373,7 +445,7 @@
     </div>
     <section class="skinCare">
         <div class="skinCare-inner">
-            <div class="skinCare-main-image">
+            <div class="skinCare-main-image blurTrigger">
                 <img src="./assets/images/test4.jpg">
             </div>
             <div class="skinCare-titles">
@@ -419,7 +491,7 @@
     <section class="concept">
         <div class="concept-inner">
             <div class="concept-contents">
-                <img class="concept-image-left" src="./assets/images/test13.JPG">
+                <img class="concept-image-left blurTrigger" src="./assets/images/test13.JPG">
                 <img class="concept-image-right" src="./assets/images/test14.JPG">
                 <div class="concept-text-box">
                     <h3>BEAUTY is SIMPLE</h3>
@@ -434,12 +506,12 @@
                     </p>
                 </div>
             </div><!--concept-contents-->
-            <img class="concept-image-bottom" src="./assets/images/test12.JPG">
+            <img class="concept-image-bottom blurTrigger" src="./assets/images/test12.JPG">
         </div><!--concept-inner-->
     </section>
     <section class="column">
         <div class="column-inner">
-            <div class="column-ground"></div>
+            <div class="column-ground fadeLeftTrigger"></div>
             <h2 class="column-title eachTextAnime">SALONIA COLUMN</h2>
             <div class="column-contents">
                 <ul class="column-contents-list1">
@@ -517,7 +589,7 @@
         <div class="support-inner">
             <h2 class="support-title eachTextAnime">SUPPORT</h2>
             <div class="support-contents">
-                <ul class="support-contents-list">
+                <ul class="support-contents-list delayScroll blurTrigger">
                     <li class="support-contents-list-item">
                         <div class="support-contents-list-itemImg">
                             <img src="./assets/images/test1.jpg">

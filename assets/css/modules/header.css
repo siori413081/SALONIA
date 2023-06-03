@@ -20,7 +20,6 @@
     height: 62px;
     background-color: #fff;
     padding-left: 65px;
-    opacity: 0.8;
     z-index: 999;
 }
 
@@ -76,21 +75,165 @@
 }
 
 .product-hover.active{
-    display: block;
-    position: absolute;
-    top: 45px;
+    position: fixed;
+    top: 64px;
     left: 0;
+    display: flex;
     width: 100vw;
     background-color: #fff;
+    padding: 50px 100px;
     z-index: 999;
+    box-sizing: border-box;
 }
 
-.product-hover ul{
+.product-hover ul:first-child{
+    padding-right: 100px;
+}
+
+.product-hover ul h3{
+    font-size: 1.1rem;
+    padding-bottom: 30px;
+}
+
+.product-hover ul h3 span{
+    font-size: .7rem;
+}
+
+.product-hover ul li{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
 }
 
 .product-hover-text{
     display: flex;
+    align-items: center;
+}
+
+.product-hover-text p{
+    line-height: 1.3;
+    font-size: .7rem;
+    padding-left: 10px;
+}
+
+.product-hover-text p::first-line{
+    font-size: .8rem;
+}
+
+.support-hover{
+    display: none;
+}
+
+.support-hover.active{
+    position: fixed;
+    top: 64px;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    background-color: #fff;
+    padding: 50px 100px;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.support-hover ul:first-child{
+    padding-right: 100px;
+}
+
+.support-hover ul h3{
+    font-size: 1.1rem;
+    padding-bottom: 30px;
+}
+
+.support-hover ul h3 span{
+    font-size: .7rem;
+}
+
+.support-hover ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.support-hover-text{
+    display: flex;
+    align-items: center;
+}
+
+.support-hover-text p{
+    line-height: 1.3;
+    font-size: .7rem;
+    padding-left: 10px;
+}
+
+.support-hover-text p::first-line{
+    font-size: .8rem;
+}
+
+.onlineShop-hover{
+    display: none;
+}
+
+.onlineShop-hover.active{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 50px;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.onlineShop-hover h3{
+    font-size: .9rem;
+    line-height: 1.3;
+}
+
+.onlineShop-hover ul{
+    display: flex;
+}
+
+.onlineShop-hover ul li{
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+    margin-left: 20px;
+}
+
+.onlineShop-hover ul li:first-child{
+    margin-left: 0;
+}
+
+.sp-onlineshop-text{
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    padding: 15px;
+}
+
+.shopping-cart1,
+.shopping-cart2,
+.shopping-cart3{
+    padding: 15px;
+    color: #fff;
+}
+
+.shopping-cart1{
+    background-color: #4b4b4b;
+}
+
+.shopping-cart2{
+    background-color: #bf0202;
+}
+
+.shopping-cart3{
+    background-color: #fd9802;
 }
 
 }
