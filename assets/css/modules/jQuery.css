@@ -4,23 +4,53 @@
 @media screen and (min-width: 769px) {
     /* PC style */
 
+.header-pc.UpMove{
+  position: fixed;
+  width:100%;
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+.header-pc.DownMove{
+	position: fixed;
+	width:100%;
+	animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime{
+  from {
+  opacity: 0;
+	transform: translateY(-100px);
+  }
+  to {
+  opacity: 1;
+	transform: translateY(0);
+  }
+}
+
 .eachTextAnime span{
   opacity: 0;
 }
 
-.eachTextAnime span{
-  animation:text_anime_on 3s ease-out forwards;
-}
-
-@keyframes text_anime_on {
-  0% {opacity:0;}
-  100% {opacity:1;}
+.eachTextAnime.active span{
+  opacity: 1;
+  transition: all 1s;
 }
 
 /*上から*/
 .fadeUp {
   animation-name:fadeUpAnime;
-  animation-duration:0.5s;
+  animation-duration:.5s;
   animation-fill-mode:forwards;
   opacity: 0;
 }
@@ -88,7 +118,7 @@ animation-fill-mode:forwards;
 
 @keyframes blurAnime{
   from {
-  filter: blur(20px);
+  filter: blur(10px);
   transform: scale(1.02);
   }
 
@@ -97,6 +127,25 @@ animation-fill-mode:forwards;
   transform: scale(1);
   }
 }
+
+.concept-fadein{
+  opacity: 0;
+  animation: concept-fadein 8s ease forwards;
+}
+
+@keyframes concept-fadein {
+  100% {  opacity: 1;}
+}
+
+/*以下遅延の指定*/
+.txt01 {animation-delay: 1s;}
+.txt02 {animation-delay: 2s;}
+.txt03 {animation-delay: 3s;}
+.txt04 {animation-delay: 4s;}
+.txt05 {animation-delay: 5s;}
+.txt06 {animation-delay: 6s;}
+.txt07 {animation-delay: 7s;}
+.txt08 {animation-delay: 8s;}
 
 }
 

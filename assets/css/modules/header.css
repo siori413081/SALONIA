@@ -21,6 +21,7 @@
     background-color: #fff;
     padding-left: 65px;
     z-index: 999;
+    opacity: .8;
 }
 
 .header-pc-title{
@@ -67,9 +68,6 @@
     transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
-.product-hover-btn{
-}
-
 .product-hover{
     display: none;
 }
@@ -79,6 +77,7 @@
     top: 64px;
     left: 0;
     display: flex;
+    justify-content: space-around;
     width: 100vw;
     background-color: #fff;
     padding: 50px 100px;
@@ -130,6 +129,7 @@
     top: 64px;
     left: 0;
     display: flex;
+    justify-content: space-around;
     width: 100vw;
     background-color: #fff;
     padding: 50px 100px;
