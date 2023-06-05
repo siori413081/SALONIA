@@ -75,6 +75,7 @@
     padding: 15px 0;
     text-align: center;
     letter-spacing: .1em;
+    cursor: pointer;
 }
 
 .sp-contents-list-item:first-child{
@@ -110,6 +111,7 @@
     display: flex;
     margin-bottom: 15px;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .sp-onlineshop li:last-child{
@@ -120,7 +122,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px 0;
     width: 100%;
 }
 

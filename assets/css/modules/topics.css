@@ -25,6 +25,7 @@
 .main-topics{
     position: relative;
     width: 45%;
+    cursor: pointer;
 }
 
 .main-topics-image{
@@ -68,6 +69,7 @@
 .sub-topics-list-item{
     display: flex;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .sub-topics-list-item:last-child{

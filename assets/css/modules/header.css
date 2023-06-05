@@ -21,12 +21,12 @@
     background-color: #fff;
     padding-left: 65px;
     z-index: 999;
-    opacity: .8;
 }
 
 .header-pc-title{
     font-size: 16px;
     letter-spacing: 0.1em;
+    cursor: pointer;
 }
 
 .header-nav-list{

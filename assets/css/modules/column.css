@@ -14,10 +14,10 @@
 
 .column-ground{
     position: absolute;
-    top: 10rem;
+    top: 6rem;
     left: 0;
     width: 80%;
-    height: 80vh;
+    height: 85vh;
     background-color: #f5f5f5;
 }
 
@@ -63,6 +63,10 @@
     opacity: .8;
 }
 
+.column-contents-list1-item1{
+    cursor: pointer;
+}
+
 .column-contents-list1-item1 p::first-line{
     font-size: .8rem;
     font-style: italic;
@@ -79,10 +83,15 @@
     line-height: 2;
     font-size: .9rem;
     letter-spacing: .1em;
+    cursor: pointer;
 }
 
 .column-contents-list2{
     width: 30%;
+}
+
+.column-contents-list2-item{
+    cursor: pointer;
 }
 
 .column-contents-list2-item:first-child{
@@ -131,7 +140,7 @@
     top: 3rem;
     left: 0;
     width: 85%;
-    height: 80vh;
+    height: 67vh;
     background-color: #f5f5f5;
 }
 

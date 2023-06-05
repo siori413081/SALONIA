@@ -1,3 +1,27 @@
+//headerをtopicsから固定
+function FixedAnime() {
+	var elemTop = $('.topics').offset().top;//#area-3の位置まできたら
+	var scroll = $(window).scrollTop();
+	if(scroll <= 20){//上から20pxスクロールされたら
+		$('.header-pc').addClass('DownMove');
+		//DownMoveというクラス名を除き
+	} else if (scroll >= elemTop){
+			$('.header-pc').removeClass('UpMove');//#headerについているUpMoveというクラス名を除く
+			$('.header-pc').addClass('DownMove');//#headerについているDownMoveというクラス名を付与
+
+		}else{
+			if($('.header-pc').hasClass('DownMove'))
+				{//すでに#headerにDownMoveというクラス名がついていたら
+				$('.header-pc').removeClass('DownMove');//DownMoveというクラス名を除き
+				$('.header-pc').addClass('UpMove');//UpnMoveというクラス名を付与
+			}
+		}
+}
+
+$(window).scroll(function () {
+	FixedAnime();
+});
+
 /*ハンバーガメニュー */
 $(".sp-open-btn").click(function () {
     $(this).toggleClass('active');
@@ -27,7 +51,6 @@ $('.slider').slick({
     pauseOnDotsHover: false,//ドットナビゲーションをマウスホバーで一時停止を無効
     arrows: false,
     dotsClass: "slide-dots"
-
 });
 
 //スマホ用：スライダーをタッチしても止めずにスライドをさせたい場合
@@ -35,6 +58,7 @@ $('.slider').on('touchmove', function(event, slick, currentSlide, nextSlide){
 $('.slider').slick('slickPlay');
 });
 
+//headerのナビをhoverした時のメニュー表示３つ
 $('.product-hover-btn').hover(function(){
 	$('.product-hover').toggleClass('active');
 });
@@ -47,23 +71,7 @@ $('.onlineShop-hover-btn').hover(function(){
 	$('.onlineShop-hover').toggleClass('active');
 });
 
-/* header スクロールしたら途中から固定 */
-function FixedAnime() {
-	var elemTop = $('.topics').offset().top;//.topicsの位置まできたら
-	var scroll = $(window).scrollTop();
-	if(scroll <= 20){//上から20pxスクロールされたら $('#header').addClass('DownMove');//DownMoveというクラス名を除き } else if (scroll >= elemTop){
-			$('.header-pc').removeClass('UpMove');//#headerについているUpMoveというクラス名を除く
-			$('.header-pc').addClass('DownMove');//#headerについているDownMoveというクラス名を付与
-
-		}else{
-			if($('.header-pc').hasClass('DownMove')){//すでに#headerにDownMoveというクラス名がついていたら
-				$('.header-pc').removeClass('DownMove');//DownMoveというクラス名を除き
-				$('.header-pc').addClass('UpMove');//UpnMoveというクラス名を付与
-			}
-		}
-}
-
-/**more の下線、矢印の動き */
+/*more の下線、矢印の動き */
 	$('.more,.more-c').hover(function(){
 		$('.arrow.arrow-right').toggleClass('active');
 	});
@@ -78,159 +86,115 @@ function FixedAnime() {
 		$('.arrow.arrow-right').toggleClass('active');
 	});
 
-/**下から順番表示 */
 function fadeAnime() {
-	var time = 1;//遅延時間を増やす秒数の値
+
+/*スクロールしたら順番に表示 */
+$('.delayScroll').each(function (){
+	var time = 0.5;//遅延時間を増やす秒数の値
 	var value = time;
-	$('.delayScroll').each(function () {
-		var parent = this;					//親要素を取得
-		var elemPos = $(this).offset().top;//要素の位置まで来たら
-		var scroll = $(window).scrollTop();//スクロール値を取得
-		var windowHeight = $(window).height();//画面の高さを取得
-		var child = $(this).children();	//子要素を取得
+	var parent = this;					//親要素を取得
+	var elemPos = $(this).offset().top;//要素の位置まで来たら
+	var scroll = $(window).scrollTop();//スクロール値を取得
+	var windowHeight = $(window).height();//画面の高さを取得
+	var child = $(this).children();	//子要素を取得
 
-		if (scroll >= elemPos - windowHeight && !$(parent).hasClass("play")) {//指定領域内にスクロールが入ったらまた親要素にクラスplayがなければ
-			$(child).each(function () {
-
-				if (!$(this).hasClass("fadeUp")) {//アニメーションのクラス名が指定されているかどうかをチェック
-
-					$(parent).addClass("play");	//親要素にクラス名playを追加
-					$(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
-					$(this).addClass("fadeUp");//アニメーションのクラス名を追加
-					value = value + time;//delay時間を増加させる
-
-					//全ての処理を終わったらplayを外す
-					var index = $(child).index(this);
-					if((child.length-1) == index){
-						$(parent).removeClass("play");
-					}else {
-						$(child).removeClass("fadeUp");//アニメーションのクラス名を削除
-						value = time;//delay初期値の数値に戻す
-					}
-				}
-			})
+	$(child).each(function () {
+	if (scroll >= elemPos - windowHeight - 50) {//指定領域内にスクロールが入ったら
+		$(this).addClass("fadeUp");
+		$(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
+		value = value + time;//delay時間を増加させる
+		//全ての処理を終わったら元に戻す
+		}else{
+		$(child).removeClass("fadeUp");//アニメーションのクラス名を削除
+		value = time;//delay初期値の数値に戻す
 		}
 	})
-
+});
 
 //じわっとする
-	$('.blurTrigger').each(function(){ //blurTriggerというクラス名が
-		var elemPos = $(this).offset().top-50; //要素より、50px上の
-		var scroll = $(window).scrollTop();
-		var windowHeight = $(window).height();
-		if (scroll >= elemPos - windowHeight){
-		$(this).addClass('blur');
-		// 画面内に入ったらfadeDownというクラス名を追記
-		}else{
-		$(this).removeClass('blur');
-		// 画面外に出たらfadeDownというクラス名を外す
-		}
-		});
+$('.blurTrigger').each(function(){ //blurTriggerというクラス名が
+	var elemPos = $(this).offset().top-50; //要素より、50px上の
+	var scroll = $(window).scrollTop();
+	var windowHeight = $(window).height();
+	if (scroll >= elemPos - windowHeight){
+	$(this).addClass('blur');
+	// 画面内に入ったらfadeDownというクラス名を追記
+	}else{
+	$(this).removeClass('blur');
+	// 画面外に出たらfadeDownというクラス名を外す
+	}
+});
 
 //左からふわっ
-	$('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
+$('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
 		var elemPos = $(this).offset().top-50; //要素より、50px上の
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
-		if (scroll >= elemPos - windowHeight){
+	if (scroll >= elemPos - windowHeight){
 		$(this).addClass('fadeLeft');
 		// 画面内に入ったらfadeDownというクラス名を追記
-		}else{
+	}else{
 		$(this).removeClass('fadeLeft');
 		// 画面外に出たらfadeDownというクラス名を外す
-		}
-		});
-
-}
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function (){
-	fadeAnime();/* アニメーション用の関数を呼ぶ*/
-});// ここまで画面をスクロールをしたら動かしたい場合の記述
-
-
-//文字が流れる
-/*function EachTextAnimeControl() {
-	$('.eachTextAnime').each(function () {
-		var elemPos = $(this).offset().top - 50;
-		var scroll = $(window).scrollTop();
-		var windowHeight = $(window).height();
-		if (scroll >= elemPos - windowHeight) {
-		$(this).addClass("appeartext");
-		} else {
-		$(this).removeClass("appeartext");
-		}
-		$(window).scroll(function () {
-			EachTextAnimeControl();/* アニメーション用の関数を呼ぶ
-		});
-		 //spanタグを追加する
-		var element = $(".eachTextAnime");
-		element.each(function () {
-			var text = $(this).text();
-			var textbox = "";
-			text.split('').forEach(function (t, i) {
-			if (t !== " ") {
-				if (i < 10) {
-				textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
-				} else {
-				var n = i / 10;
-				textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
-				}
-
-			}
-			});
-			$(this).html(textbox);
-		});
-	});
-}*/
-
-
-// それぞれのtitleにspan設定
-$(".eachTextAnime").each(function() {
-	var content = $(this).html();
-	var trimText = $.trim(content);
-	var newText = "";
-
-	trimText.split("").forEach(function(e) {
-	if(e == ' '){
-		// 空白対策
-		newText += '<span> </span>';
-	} else {
-		newText += '<span>' + e + '</span>';
 	}
 	});
-	$(this).html(newText);
+
+//concept fadein
+$('.concept-text-box').each(function(){
+	var elemPos = $(this).offset().top+300;
+	var scroll = $(window).scrollTop();
+	var windowHeight = $(window).height();
+if (scroll >= elemPos - windowHeight){
+	$('.concept-fadein').addClass('active');
+}else{
+	$('.concept-fadein').removeClass('active');
+}
 });
+
+}
+
+
 
 $(window).scroll(function (){
-	$('.eachTextAnime').each(function(){
-		var position = $(this).offset().top;
-		var scroll = $(window).scrollTop();
-		var windowHeight = $(window).height();
-		if (scroll > position - windowHeight + 200){
-		  $(this).addClass('active');
-		}
-	});
+	fadeAnime();
 });
 
-
-
-//headerをtopicsから固定
-function FixedAnime() {
-	var elemTop = $('.topics').offset().top;//#area-3の位置まできたら
+// eachTextAnimeにactiveというクラス名を付ける定義
+function EachTextAnimeControl() {
+$('.eachTextAnime').each(function () {
+	var elemPos = $(this).offset().top - 50;
 	var scroll = $(window).scrollTop();
-	if(scroll <= 20){//上から20pxスクロールされたら $('#header').addClass('DownMove');//DownMoveというクラス名を除き } else if (scroll >= elemTop){
-			$('.header-pc').removeClass('UpMove');//#headerについているUpMoveというクラス名を除く
-			$('.header-pc').addClass('DownMove');//#headerについているDownMoveというクラス名を付与
+	var windowHeight = $(window).height();
+	if (scroll >= elemPos - windowHeight) {
+	$(this).addClass("active");
 
-		}else{
-			if($('.header-pc').hasClass('DownMove'))
-				{//すでに#headerにDownMoveというクラス名がついていたら
-				$('.header-pc').removeClass('DownMove');//DownMoveというクラス名を除き
-				$('.header-pc').addClass('UpMove');//UpnMoveというクラス名を付与
-			}
-		}
+	} else {
+	$(this).removeClass("active");
+	}
+});
 }
 
 $(window).scroll(function () {
-	FixedAnime();
+EachTextAnimeControl();
+});
+
+//spanタグを追加する
+var element = $(".eachTextAnime");
+element.each(function () {
+	var text = $(this).text();
+	var textbox = "";
+	text.split('').forEach(function (t, i) {
+	if (t !== " ") {
+		if (i < 10) {
+		textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+		} else {
+		var n = i / 10;
+		textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+		}
+
+	} else {
+		textbox += t;
+	}
+	});
+	$(this).html(textbox);
 });
