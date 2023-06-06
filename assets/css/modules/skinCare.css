@@ -96,11 +96,13 @@
 .skinCare-main-title{
     font-size: 1rem;
     padding-bottom: 20px;
+    letter-spacing: .1em;
 }
 
 .skinCare-sub-title{
     font-size: .8rem;
     padding-bottom: 20px;
+    letter-spacing: .1em;
 }
 
 .skinCare-image{
