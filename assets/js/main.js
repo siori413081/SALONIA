@@ -104,9 +104,6 @@ $('.delayScroll').each(function (){
 		$(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
 		value = value + time;//delay時間を増加させる
 		//全ての処理を終わったら元に戻す
-		}else{
-		$(child).removeClass("fadeUp");//アニメーションのクラス名を削除
-		value = time;//delay初期値の数値に戻す
 		}
 	})
 });
@@ -119,9 +116,6 @@ $('.blurTrigger').each(function(){ //blurTriggerというクラス名が
 	if (scroll >= elemPos - windowHeight){
 	$(this).addClass('blur');
 	// 画面内に入ったらfadeDownというクラス名を追記
-	}else{
-	$(this).removeClass('blur');
-	// 画面外に出たらfadeDownというクラス名を外す
 	}
 });
 
@@ -133,21 +127,16 @@ $('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
 	if (scroll >= elemPos - windowHeight){
 		$(this).addClass('fadeLeft');
 		// 画面内に入ったらfadeDownというクラス名を追記
-	}else{
-		$(this).removeClass('fadeLeft');
-		// 画面外に出たらfadeDownというクラス名を外す
 	}
 	});
 
 //concept fadein
 $('.concept-text-box').each(function(){
-	var elemPos = $(this).offset().top+300;
+	var elemPos = $(this).offset().top+200;
 	var scroll = $(window).scrollTop();
 	var windowHeight = $(window).height();
 if (scroll >= elemPos - windowHeight){
 	$('.concept-fadein').addClass('active');
-}else{
-	$('.concept-fadein').removeClass('active');
 }
 });
 
@@ -168,8 +157,6 @@ $('.eachTextAnime').each(function () {
 	if (scroll >= elemPos - windowHeight) {
 	$(this).addClass("active");
 
-	} else {
-	$(this).removeClass("active");
 	}
 });
 }

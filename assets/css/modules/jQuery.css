@@ -40,10 +40,11 @@
 
 .eachTextAnime span{
   opacity: 0;
+  display: inline-block;
 }
 
 .eachTextAnime.active span{
-  animation:text_anime_on 2s ease-out forwards;
+  animation:text_anime_on 0.5s ease-out forwards;
 }
 
 @keyframes text_anime_on {

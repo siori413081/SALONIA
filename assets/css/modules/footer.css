@@ -21,6 +21,19 @@
     letter-spacing: .1em;
 }
 
+.footer-top-image{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 60px;
+}
+
+.footer-top-image01,
+.footer-top-image02{
+    width: 47%;
+    height: 14vh;
+    object-fit: cover;
+}
+
 .footer-middle-pc{
     display: flex;
     justify-content: space-between;
@@ -121,6 +134,20 @@
     text-align: center;
     font-size: .8rem;
     letter-spacing: .1em;
+}
+
+.footer-top-image{
+    margin: 20px 0 60px;
+}
+
+.footer-top-image01,
+.footer-top-image02{
+    width: 100%;
+    height: 11vh;
+}
+
+.footer-top-image01{
+    margin-bottom: 20px;
 }
 
 .footer-middle-pc{
