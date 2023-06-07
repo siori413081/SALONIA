@@ -14,11 +14,11 @@
 /*　背景画像設定　*/
 
 .slider-item01 {
-    background:url(../../../assets/images/hero1.JPG);
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero1.jpg?raw=true);
 }
 
 .slider-item02 {
-    background:url(../../../assets/images/hero2.JPG);
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero2.jpg?raw=true);
 }
 
 .slider-item03 {
@@ -26,11 +26,11 @@
 }
 
 .slider-item04 {
-    background:url(../../../assets/images/hero4.JPG);
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero4.jpg?raw=true);
 }
 
 .slider-item05 {
-    background:url(../../../assets/images/hero5.JPG);
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero5.jpg?raw=true);
 }
 
 .slick-track{
@@ -93,24 +93,23 @@
 /*　背景画像設定　*/
 
 .slider-item01 {
-    background:url(../../../assets/images/hero1.JPG);
-    background-image: url("siori413081.github.io/portfolio2/assets/images/hero1.png");
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero1.jpg?raw=true);
 }
 
 .slider-item02 {
-    background:url(../../../assets/images/hero2.JPG);
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero2.jpg?raw=true);
 }
 
 .slider-item03 {
-    background:url(../../../assets/images/hero3.JPG);
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero3.jpg?raw=true);
 }
 
 .slider-item04 {
-    background:url(../../../assets/images/hero4.JPG);
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero4.jpg?raw=true);
 }
 
 .slider-item05 {
-    background:url(../../../assets/images/hero5.JPG);
+    background:url(https://github.com/siori413081/portfolio2/blob/main/assets/images/hero5.jpg?raw=true);
 }
 
 .slick-track{
