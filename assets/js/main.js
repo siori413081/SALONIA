@@ -133,7 +133,7 @@ $('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
 	});
 
 $('.concept-fadein').each(function(){
-	var flag = false, // 追加
+	var flag = false // 追加
 	var elemPos = $(this).offset().top+200;
 	var scroll = $(window).scrollTop();
 	var windowHeight = $(window).height();
