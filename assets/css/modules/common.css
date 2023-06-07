@@ -93,12 +93,12 @@ body{
 
 .arrow.arrow-right::before {
     transform: rotate(45deg);
-    transition: all 1s;
+    transition: margin-left .5s 0s ease;
 }
 
 .arrow.arrow-right.active::before{
     margin-left: 5px;
-    transition: all 1s;
+    transition: margin-left .5s 0s ease;
 }
 
 
@@ -174,9 +174,5 @@ body.fixed{
     transform: rotate(45deg);
 }
 
-.arrow::before.active{
-    left: 13px;
-    transition: .3s;
-}
 
 }

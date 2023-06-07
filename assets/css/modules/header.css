@@ -29,14 +29,20 @@
     cursor: pointer;
 }
 
+.header-nav{
+    height: 100%;
+}
+
 .header-nav-list{
     display: flex;
+    height: 100%;
 }
 
 .header-nav-list-item{
     position: relative;
+    height: 100%;
     font-size: 14px;
-    line-height: 2;
+    line-height: 4.5;
     margin-right: 30px;
     letter-spacing: 0.1em;
 }
@@ -52,7 +58,7 @@
 .header-nav-list-item a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 45px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -74,7 +80,7 @@
 
 .product-hover.active{
     position: fixed;
-    top: 64px;
+    top: 50px;
     left: 0;
     display: flex;
     justify-content: space-around;
@@ -126,7 +132,7 @@
 
 .support-hover.active{
     position: fixed;
-    top: 64px;
+    top: 50px;
     left: 0;
     display: flex;
     justify-content: space-around;
@@ -172,8 +178,22 @@
     font-size: .8rem;
 }
 
+.product-hover h3,
+.support-hover h3{
+    cursor: pointer;
+}
+
+.product-hover li,
+.support-hover li{
+    cursor: pointer;
+}
+
 .onlineShop-hover{
     display: none;
+}
+
+.onlineShop-hover li{
+    cursor: pointer;
 }
 
 .onlineShop-hover.active{
@@ -181,7 +201,7 @@
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    top: 64px;
+    top: 50px;
     left: 0;
     width: 100%;
     background-color: #fff;
@@ -214,7 +234,7 @@
     display: flex;
     align-items: center;
     font-size: .8rem;
-    padding: 15px;
+    padding-left: 10px;
 }
 
 .shopping-cart1,

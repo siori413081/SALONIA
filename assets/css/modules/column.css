@@ -57,10 +57,13 @@
     transition: all 1s;
 }
 
+.column-contents-list1-item1 img.active{
+    opacity: .7;
+}
+
 .column-contents-list1-image img:hover{
     transform: scale(1.2,1.2);
-    transition: all 1s;
-    opacity: .8;
+    transition: transform 1s;
 }
 
 .column-contents-list1-item1{
@@ -107,7 +110,11 @@
 .column-contents-list2-image img{
     width: 100%;
     object-fit: cover;
-    transition: all 1s;
+    transition: transform 1s;
+}
+
+.column-contents-list2-image img.active{
+    opacity: .7;
 }
 
 .column-contents-list2-image img:hover{
@@ -162,6 +169,7 @@
 .column-contents-list1{
     width: 70%;
     padding-left: 30px;
+    cursor: pointer;
 }
 
 .column-contents-list1-item1 img{
@@ -186,6 +194,7 @@
 .column-contents-list2{
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .column-contents-list2-item:first-child{

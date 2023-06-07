@@ -73,17 +73,20 @@ $('.onlineShop-hover-btn').hover(function(){
 
 /*more の下線、矢印の動き */
 	$('.more,.more-c').hover(function(){
-		$('.arrow.arrow-right').toggleClass('active');
+		let children =$(this).children()
+		$(children).next('div').toggleClass('active');
 	});
 
 /*supportの矢印の動き */
 	$('.support-contents-text,.support-question').hover(function(){
-		$('.arrow.arrow-right').toggleClass('active');
+		let children =$(this).children()
+		$(children).next('div').toggleClass('active');
 	});
 
 /*selectの矢印の動き */
 	$('.select-start,.select-more').hover(function(){
-		$('.arrow.arrow-right').toggleClass('active');
+		let children =$(this).children()
+		$(children).next('div').toggleClass('active');
 	});
 
 function fadeAnime() {
@@ -115,7 +118,6 @@ $('.blurTrigger').each(function(){ //blurTriggerというクラス名が
 	var windowHeight = $(window).height();
 	if (scroll >= elemPos - windowHeight){
 	$(this).addClass('blur');
-	// 画面内に入ったらfadeDownというクラス名を追記
 	}
 });
 
@@ -130,19 +132,24 @@ $('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
 	}
 	});
 
-//concept fadein
-$('.concept-text-box').each(function(){
+$('.concept-fadein').each(function(){
+	var flag = false, // 追加
 	var elemPos = $(this).offset().top+200;
 	var scroll = $(window).scrollTop();
 	var windowHeight = $(window).height();
-if (scroll >= elemPos - windowHeight){
-	$('.concept-fadein').addClass('active');
-}
+	if (scroll >= elemPos - windowHeight){
+		if (!flag) {// 追加
+		flag = true;// 追加
+	$('.concept-fadein')
+		.css({opacity: 0})
+		.each(function(i){
+			$(this).delay(500 * i).animate({opacity:1}, 1500);
+		});
+		}
+	}
 });
 
 }
-
-
 
 $(window).scroll(function (){
 	fadeAnime();
@@ -184,4 +191,18 @@ element.each(function () {
 	}
 	});
 	$(this).html(textbox);
+});
+
+$('.support-contents-list-item').hover(function(){
+	let children =$(this).children('.support-contents-list-itemImg').children('img')
+	$(children).toggleClass('active');
+});
+
+$('.column-contents-list1').hover(function(){
+	$('.column-contents-list1-item1 img').toggleClass('active');
+});
+
+$('.column-contents-list2-item').hover(function(){
+	let children = $(this).children('div').children('img')
+	$(children).toggleClass('active');
 });

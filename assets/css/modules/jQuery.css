@@ -140,28 +140,6 @@ animation-fill-mode:forwards;
   }
 }
 
-.concept-fadein{
-  opacity: 0;
-}
-
-.concept-fadein.active{
-  animation: concept-fadein 8s ease forwards;
-}
-
-@keyframes concept-fadein {
-  100% {  opacity: 1;}
-}
-
-/*以下遅延の指定*/
-.txt01 {animation-delay: 1s;}
-.txt02 {animation-delay: 2s;}
-.txt03 {animation-delay: 3s;}
-.txt04 {animation-delay: 4s;}
-.txt05 {animation-delay: 5s;}
-.txt06 {animation-delay: 6s;}
-.txt07 {animation-delay: 7s;}
-.txt08 {animation-delay: 8s;}
-
 }
 
 @media screen and (max-width: 768px) {
@@ -246,26 +224,5 @@ animation-fill-mode:forwards;
   }
 }
 
-.concept-fadein{
-  opacity: 0;
-}
-
-.concept-fadein.active{
-  animation: concept-fadein 8s ease forwards;
-}
-
-@keyframes concept-fadein {
-  100% {  opacity: 1;}
-}
-
-/*以下遅延の指定*/
-.txt01 {animation-delay: 1s;}
-.txt02 {animation-delay: 2s;}
-.txt03 {animation-delay: 3s;}
-.txt04 {animation-delay: 4s;}
-.txt05 {animation-delay: 5s;}
-.txt06 {animation-delay: 6s;}
-.txt07 {animation-delay: 7s;}
-.txt08 {animation-delay: 8s;}
 
 }
