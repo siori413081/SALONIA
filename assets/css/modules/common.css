@@ -74,6 +74,11 @@ body{
     letter-spacing: .1em;
 }
 
+.more p.hover,
+.more-c p.hover{
+    opacity: .7;
+}
+
 .arrow {
     position: relative;
     display: inline-block;
@@ -101,6 +106,9 @@ body{
     transition: margin-left .5s 0s ease;
 }
 
+.arrow.arrow-right.hover::before{
+    opacity: .7;
+}
 
 }
 

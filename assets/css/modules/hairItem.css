@@ -50,7 +50,7 @@
 }
 
 .hairItem-image-list-itemImg img:hover{
-    opacity: .8;
+    opacity: .7;
     transition: all 1s;
     transform: scale(1.2,1.2);
 }

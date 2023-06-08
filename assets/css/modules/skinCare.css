@@ -62,7 +62,7 @@
 .skinCare-image-list-itemImg img:hover{
     transform: scale(1.2,1.2);
     transition: all 1s;
-    opacity: .8;
+    opacity: .7;
 }
 
 .skinCare-image-list-item p{

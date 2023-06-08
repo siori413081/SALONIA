@@ -89,9 +89,26 @@ $('.onlineShop-hover-btn').hover(function(){
 		$(children).next('div').toggleClass('active');
 	});
 
+//more hover
+$('.more,.more-c').hover(function(){
+	let children =$(this).children('.more p,.more-c p,.arrow.arrow-right')
+	$(children).toggleClass('hover');
+});
+
+//select hover
+$('.select-more,.select-start').hover(function(){
+	let children =$(this).children('.select-more p,.select-start p,.arrow.arrow-right')
+	$(children).toggleClass('hover');
+});
+
+$('.sub-topics-list-item').hover(function(){
+	let children =$(this).children('div').children('img')
+	$(children).toggleClass('hover');
+});
+
 function fadeAnime() {
 
-/*スクロールしたら順番に表示 */
+/*スクロールしたら下からひゅっと順番に表示 */
 $('.delayScroll').each(function (){
 	var time = 0.5;//遅延時間を増やす秒数の値
 	var value = time;
@@ -104,6 +121,25 @@ $('.delayScroll').each(function (){
 	$(child).each(function () {
 	if (scroll >= elemPos - windowHeight - 50) {//指定領域内にスクロールが入ったら
 		$(this).addClass("fadeUp");
+		$(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
+		value = value + time;//delay時間を増加させる
+		//全ての処理を終わったら元に戻す
+		}
+	})
+});
+
+$('.conceptScroll').each(function (){
+	var time = 0.2;//遅延時間を増やす秒数の値
+	var value = time;
+	var parent = this;					//親要素を取得
+	var elemPos = $(this).offset().top;//要素の位置まで来たら
+	var scroll = $(window).scrollTop();//スクロール値を取得
+	var windowHeight = $(window).height();//画面の高さを取得
+	var child = $(this).children();	//子要素を取得
+
+	$(child).each(function () {
+	if (scroll >= elemPos - windowHeight - 50) {//指定領域内にスクロールが入ったら
+		$(this).addClass("concept-blur");
 		$(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
 		value = value + time;//delay時間を増加させる
 		//全ての処理を終わったら元に戻す
@@ -132,7 +168,7 @@ $('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
 	}
 	});
 
-$('.concept-fadein').each(function(){
+/*$('.concept-fadein').each(function(){
 	var flag = false // 追加
 	var elemPos = $(this).offset().top+200;
 	var scroll = $(window).scrollTop();
@@ -147,7 +183,7 @@ $('.concept-fadein').each(function(){
 		});
 		}
 	}
-});
+});*/
 
 }
 
@@ -206,3 +242,4 @@ $('.column-contents-list2-item').hover(function(){
 	let children = $(this).children('div').children('img')
 	$(children).toggleClass('active');
 });
+

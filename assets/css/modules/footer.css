@@ -71,11 +71,16 @@
     padding-left: 71.5px;
 }
 
+
 .english{
     font-size: .8rem;
     padding-right: 15px;
     letter-spacing: .1em;
     cursor: pointer;
+}
+
+.english:hover{
+    opacity: .6;
 }
 
 .chinese{
@@ -84,6 +89,10 @@
     padding-left: 15px;
     letter-spacing: .1em;
     cursor: pointer;
+}
+
+.chinese:hover{
+    opacity: .6;
 }
 
 .footer-bottom{
@@ -113,6 +122,11 @@
     padding-bottom: 20px;
     letter-spacing: .1em;
     cursor: pointer;
+}
+
+.footer-product-list-item:hover,
+.footer-contents-list-item:hover{
+    opacity: 0.6;
 }
 
 .footer-bottom-box{

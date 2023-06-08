@@ -49,9 +49,6 @@
 
 .header-nav-list-item a{
     cursor: pointer;
-}
-
-.header-nav-list-item a{
     color: #000;
 }
 
@@ -72,6 +69,10 @@
 /*現在地とhoverの設定*/
 .header-nav-list-item a:hover::after {
     transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+.header-nav-list-item a:hover{
+    opacity: 0.6;
 }
 
 .product-hover{

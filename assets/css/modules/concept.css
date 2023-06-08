@@ -58,6 +58,10 @@
     line-height: 3;
 }
 
+.concept-scroll-item{
+    opacity: 0;
+}
+
 .concept-image-bottom{
     margin-top: 800px;
     width: 100%;
@@ -111,6 +115,10 @@
     font-weight: bold;
     letter-spacing: 0.1em;
     padding-bottom: 30px;
+}
+
+.concept-scroll-item{
+    opacity: 0;
 }
 
 .concept-text-box p{
