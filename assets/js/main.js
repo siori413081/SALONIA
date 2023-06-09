@@ -168,23 +168,6 @@ $('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
 	}
 	});
 
-/*$('.concept-fadein').each(function(){
-	var flag = false // 追加
-	var elemPos = $(this).offset().top+200;
-	var scroll = $(window).scrollTop();
-	var windowHeight = $(window).height();
-	if (scroll >= elemPos - windowHeight){
-		if (!flag) {// 追加
-		flag = true;// 追加
-	$('.concept-fadein')
-		.css({opacity: 0})
-		.each(function(i){
-			$(this).delay(500 * i).animate({opacity:1}, 1500);
-		});
-		}
-	}
-});*/
-
 }
 
 $(window).scroll(function (){
@@ -243,3 +226,12 @@ $('.column-contents-list2-item').hover(function(){
 	$(children).toggleClass('active');
 });
 
+$('.skinCare-image-list-item').hover(function(){
+	let children =$(this).children('div').children('img');
+	$(children).toggleClass('hover');
+});
+
+$('.hairItem-image-list-item').hover(function(){
+	let children =$(this).children('div').children('img');
+	$(children).toggleClass('hover');
+});

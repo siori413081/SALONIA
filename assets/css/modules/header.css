@@ -99,6 +99,7 @@
 .product-hover ul h3{
     font-size: 1.1rem;
     padding-bottom: 30px;
+    cursor: pointer;
 }
 
 .product-hover ul h3 span{
@@ -115,6 +116,10 @@
 .product-hover-text{
     display: flex;
     align-items: center;
+}
+
+.product-hover-text:hover{
+    opacity: 0.7;
 }
 
 .product-hover-text p{
@@ -151,6 +156,7 @@
 .support-hover ul h3{
     font-size: 1.1rem;
     padding-bottom: 30px;
+    cursor: pointer;
 }
 
 .support-hover ul h3 span{
@@ -167,6 +173,10 @@
 .support-hover-text{
     display: flex;
     align-items: center;
+}
+
+.support-hover-text:hover{
+    opacity: 0.7;
 }
 
 .support-hover-text p{
@@ -195,6 +205,10 @@
 
 .onlineShop-hover li{
     cursor: pointer;
+}
+
+.onlineShop-hover li:hover{
+    opacity: .7;
 }
 
 .onlineShop-hover.active{
