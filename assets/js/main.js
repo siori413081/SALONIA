@@ -213,25 +213,33 @@ element.each(function () {
 });
 
 $('.support-contents-list-item').hover(function(){
-	let children =$(this).children('.support-contents-list-itemImg').children('img')
-	$(children).toggleClass('active');
-});
-
-$('.column-contents-list1').hover(function(){
-	$('.column-contents-list1-item1 img').toggleClass('active');
+	let children =$(this).children();
+	$(children).toggleClass('hover');
 });
 
 $('.column-contents-list2-item').hover(function(){
-	let children = $(this).children('div').children('img')
-	$(children).toggleClass('active');
+	let children = $(this).children();
+	$(children).toggleClass('hover');
 });
 
-$('.skinCare-image-list-item').hover(function(){
+$('.main-topics').hover(function(){
 	let children =$(this).children('div').children('img');
+	let child_p =$(this).children('p');
+	$(children).toggleClass('hover');
+	$(child_p).toggleClass('hover');
+});
+
+$('.sub-topics-list-item').hover(function(){
+	let children =$(this).children();
 	$(children).toggleClass('hover');
 });
 
 $('.hairItem-image-list-item').hover(function(){
-	let children =$(this).children('div').children('img');
+	let children =$(this).children();
+	$(children).toggleClass('hover');
+});
+
+$('.skinCare-image-list-item').hover(function(){
+	let children =$(this).children();
 	$(children).toggleClass('hover');
 });

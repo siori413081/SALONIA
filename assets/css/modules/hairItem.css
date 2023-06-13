@@ -44,24 +44,28 @@
     overflow: hidden;
 }
 
+.hairItem-image-list-itemImg.hover{
+    opacity: .7;
+}
+
 .hairItem-image-list-itemImg img{
     height: 24.8vh;
     object-fit: cover;
     transition: transform 1s;
 }
 
-.hairItem-image-list-itemImg img.hover{
-    opacity: .7;
-}
-
 .hairItem-image-list-itemImg img:hover{
-    transition: all 1s;
+    transition: transform 1s;
     transform: scale(1.2,1.2);
 }
 
 .hairItem-image-list-item p{
     font-size: .8rem;
     text-align: center;
+}
+
+.hairItem-image-list-item p.hover{
+    opacity: .7;
 }
 
 }

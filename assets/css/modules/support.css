@@ -37,19 +37,19 @@
     overflow: hidden;
 }
 
+.support-contents-list-itemImg.hover{
+    opacity: .7;
+}
+
 .support-contents-list-itemImg img{
     width: 100%;
     height: 30vh;
     transition: transform 1s;
 }
 
-.support-contents-list-itemImg img.active{
-    opacity: 0.6;
-}
-
 .support-contents-list-itemImg img:hover{
     transform: scale(1.2,1.2);
-    transition: all 1s;
+    transition: transform 1s;
 }
 
 .support-contents-text{
@@ -60,11 +60,19 @@
     cursor: pointer;
 }
 
+.support-contents-text.hover{
+    opacity: .7;
+}
+
 .support-question{
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.support-question.hover{
+    opacity: .7;
 }
 
 .support-question p{

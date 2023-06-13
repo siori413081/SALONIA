@@ -54,6 +54,10 @@
     overflow: hidden;
 }
 
+.skinCare-image-list-itemImg.hover{
+    opacity: .7;
+}
+
 .skinCare-image-list-itemImg img{
     height: 24.8vh;
     object-fit: cover;
@@ -62,16 +66,16 @@
 
 .skinCare-image-list-itemImg img:hover{
     transform: scale(1.2,1.2);
-    transition: all 1s;
-}
-
-.skinCare-image-list-itemImg img.hover{
-    opacity: .7;
+    transition: transform 1s;
 }
 
 .skinCare-image-list-item p{
     font-size: .8rem;
     text-align: center;
+}
+
+.skinCare-image-list-item p.hover{
+    opacity: .7;
 }
 
 }
